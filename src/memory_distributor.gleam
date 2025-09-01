@@ -1,7 +1,7 @@
 import gleam/dict
 import gleam/otp/actor
-import shared_types/actor_pool_types.{type ActorPool}
-import shared_types/distributor_types.{
+import shared_types/memory_actor_pool_types.{type ActorPool}
+import shared_types/memory_distributor_types.{
   type DistributorMessage, type DistributorState, DistributorState,
 }
 import utils/phash2.{phash2}

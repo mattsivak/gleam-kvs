@@ -1,4 +1,4 @@
-import shared_types/actor_pool_types.{type ActorPool}
+import shared_types/memory_actor_pool_types.{type ActorPool}
 import shared_types/memory_types.{type MemoryMessage}
 
 pub type DistributorMessage {

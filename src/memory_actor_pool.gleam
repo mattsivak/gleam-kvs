@@ -1,6 +1,6 @@
 import gleam/dict
 import memory.{spawn_new_memory_actor}
-import shared_types/actor_pool_types.{type ActorPool, ActorPool}
+import shared_types/memory_actor_pool_types.{type ActorPool, ActorPool}
 
 pub fn spawn_pool_of_memory_actors(
   count: Int,

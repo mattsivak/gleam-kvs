@@ -1,6 +1,6 @@
 import gleam/dict
 import gleam/otp/actor
-import shared_types/actor_pool_types.{type ActorPool}
+import shared_types/memory_actor_pool_types.{type ActorPool}
 import shared_types/memory_types.{type Data, Dump, DumpMessage, InvalidValue}
 
 pub fn generate_complete_dump(
