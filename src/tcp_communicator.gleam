@@ -30,6 +30,7 @@ pub fn start_tcp_server() {
         glisten.continue(communication_actor)
       },
     )
+    |> glisten.bind("0.0.0.0")
     |> glisten.start(9999)
 
   echo "Started tcp server on port 9999"
