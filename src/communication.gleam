@@ -9,7 +9,13 @@ pub fn communication_loop(state: Data, message: CommunicationMessage) {
   case message {
     Shutdown -> actor.stop()
     ProcessMessage(conn, msg) -> {
-      let assert Ok(_) = glisten.send(conn, bytes_tree.from_string(msg))
+      case msg {
+        "ping" <> _ -> {
+          let assert Ok(_) = glisten.send(conn, bytes_tree.from_string("pong"))
+          actor.continue(state)
+        }
+        _ -> actor.continue(state)
+      }
 
       actor.continue(state)
     }
